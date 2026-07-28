@@ -18,7 +18,7 @@ import (
 //	    DBHost string `mapstructure:"DB_HOST"`
 //	}
 //	config, err := env_config.LoadConfig[Config](".", ".env", "env")
-func LoadConfig[T any](path, configFile, configType string) (config T, err error) {
+func UseViper[T any](path, configFile, configType string) (config T, err error) {
 	viper.AddConfigPath(path)
 	viper.SetConfigFile(configFile)
 	viper.SetConfigType(configType)
