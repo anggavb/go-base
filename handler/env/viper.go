@@ -1,4 +1,4 @@
-package env_config
+package load_config
 
 import (
 	"github.com/spf13/viper"
